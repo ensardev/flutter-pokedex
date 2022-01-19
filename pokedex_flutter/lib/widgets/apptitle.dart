@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokedex_flutter/constant/constant.dart';
 
 class AppTitle extends StatefulWidget {
   AppTitle({Key? key}) : super(key: key);
@@ -14,15 +16,18 @@ class _AppTitleState extends State<AppTitle> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const Align(
+        Align(
           alignment: Alignment.topLeft,
-          child: Text("PokeDex"),
+          child: Text(
+            Constants.title,
+            style: Constants.titleTextStyle(),
+          ),
         ),
         Align(
           alignment: Alignment.topRight,
           child: Image.asset(
             logoImage,
-            height: 100,
+            height: 100.h,
             fit: BoxFit.fitHeight,
           ),
         ),
