@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_flutter/models/pokemon_model.dart';
 import 'package:pokedex_flutter/services/pokedex_api.dart';
+import 'package:pokedex_flutter/widgets/apptitle.dart';
 import 'package:pokedex_flutter/widgets/pokemon_list.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,7 +10,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PokemonList(),
+      body: Column(
+        children: [
+          AppTitle(),
+          Expanded(child: PokemonList()),
+        ],
+      ),
     );
   }
 }
