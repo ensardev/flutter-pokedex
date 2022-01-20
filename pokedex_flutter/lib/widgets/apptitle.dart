@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex_flutter/constant/constant.dart';
+import 'package:pokedex_flutter/constant/ui_helper.dart';
 
 class AppTitle extends StatefulWidget {
   AppTitle({Key? key}) : super(key: key);
@@ -14,24 +15,28 @@ class _AppTitleState extends State<AppTitle> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Align(
-          alignment: Alignment.topLeft,
-          child: Text(
-            Constants.title,
-            style: Constants.titleTextStyle(),
+    return Container(
+      color: Colors.pink,
+      height: UIHelper.getAppTitleWidgetHeight(),
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              Constants.title,
+              style: Constants.titleTextStyle(),
+            ),
           ),
-        ),
-        Align(
-          alignment: Alignment.topRight,
-          child: Image.asset(
-            logoImage,
-            height: 100.h,
-            fit: BoxFit.fitHeight,
+          Align(
+            alignment: Alignment.topRight,
+            child: Image.asset(
+              logoImage,
+              height: 100.h,
+              fit: BoxFit.fitHeight,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

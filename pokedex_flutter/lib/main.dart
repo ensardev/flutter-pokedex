@@ -14,8 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(393, 808),
+      designSize: const Size(1080, 2220),
       builder: () => MaterialApp(
+        builder: (context, Widget? widget) {
+          ScreenUtil.setContext(context);
+          return MediaQuery(data: new MediaQueryData(), child: widget!);
+        },
         debugShowCheckedModeBanner: false,
         title: 'PokeDex',
         theme: ThemeData.dark().copyWith(
