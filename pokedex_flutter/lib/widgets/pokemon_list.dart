@@ -31,6 +31,7 @@ class _PokemonListState extends State<PokemonList> {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: UIHelper.getPokemonSize(),
             ),
+            itemCount: _myPokemonList.length,
             itemBuilder: (BuildContext context, int index) {
               return PokemonListItem(pokemon: _myPokemonList[index]);
             },

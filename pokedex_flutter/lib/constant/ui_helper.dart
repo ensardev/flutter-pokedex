@@ -12,6 +12,10 @@ class UIHelper {
     return ScreenUtil().orientation == Orientation.portrait ? 0.1.sh : 0.1.sw;
   }
 
+  static double calculatePokemonImageSize() {
+    return ScreenUtil().orientation == Orientation.portrait ? 0.3.sw : 0.3.sh;
+  }
+
   static EdgeInsets getDefaultPadding() {
     return ScreenUtil().orientation == Orientation.portrait
         ? EdgeInsets.all(12.h)

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_flutter/constant/constant.dart';
 import 'package:pokedex_flutter/models/pokemon_model.dart';
+import 'package:pokedex_flutter/widgets/pokemon_img.dart';
 
 class PokemonListItem extends StatelessWidget {
   final PokemonModel pokemon;
@@ -19,7 +20,8 @@ class PokemonListItem extends StatelessWidget {
           ),
           Chip(
             label: Text(pokemon.type![0]),
-          )
+          ),
+          Expanded(child: PokemonImage(pokemon: pokemon)),
         ],
       ),
     );
