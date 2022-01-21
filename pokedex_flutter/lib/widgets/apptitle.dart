@@ -15,24 +15,26 @@ class _AppTitleState extends State<AppTitle> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.pink,
+    return SizedBox(
       height: UIHelper.getAppTitleWidgetHeight(),
       child: Stack(
         children: [
-          Align(
-            alignment: Alignment.topLeft,
-            child: Text(
-              Constants.title,
-              style: Constants.titleTextStyle(),
+          Padding(
+            padding: UIHelper.getDefaultPadding(),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                Constants.title,
+                style: Constants.titleTextStyle(),
+              ),
             ),
           ),
           Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.centerRight,
             child: Image.asset(
               logoImage,
-              height: 100.h,
-              fit: BoxFit.fitHeight,
+              width: UIHelper.getLogoSize(),
+              fit: BoxFit.fitWidth,
             ),
           ),
         ],
