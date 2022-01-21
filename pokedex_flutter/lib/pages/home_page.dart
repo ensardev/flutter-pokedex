@@ -11,11 +11,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            AppTitle(),
-            Expanded(child: PokemonList()),
-          ],
+        child: OrientationBuilder(
+          builder: (context, orientation) => Column(
+            children: [
+              AppTitle(),
+              Expanded(child: PokemonList()),
+            ],
+          ),
         ),
       ),
     );

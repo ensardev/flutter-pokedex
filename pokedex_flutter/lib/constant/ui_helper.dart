@@ -17,4 +17,8 @@ class UIHelper {
         ? EdgeInsets.all(12.h)
         : EdgeInsets.all(5.w);
   }
+
+  static int getPokemonSize() {
+    return ScreenUtil().orientation == Orientation.portrait ? 2 : 3;
+  }
 }
