@@ -18,7 +18,7 @@ class Constants {
     return const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w500,
-      fontSize: 24,
+      fontSize: 18,
     );
   }
 }
